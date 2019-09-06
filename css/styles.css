@@ -30,10 +30,16 @@
 }
 .carousel_button{
     position: absolute;
-    top:50%;
-    transform: translateY(-50%);
+    top:80%;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.right_nav{
+    right: -1px;
+    z-index: 5;
 }
 
 .carousel_button img{
-    width: 34px;
+    width: 82px;
 }
