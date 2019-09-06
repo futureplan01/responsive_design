@@ -13,6 +13,14 @@ slides.forEach(setSlidePosition);
 
 //Click Right Button move slide to the right
 rightButton.addEventListener('click', (e)=>{
-    let currentSide = carousel.querySelector('.current_slide');
-    console.log(currentSide.nextElementSibling);
+    let currentSlide = carousel.querySelector('.current_slide');
+    let nextSlide = currentSlide.nextElementSibling.style.left;
+
+    carousel.style.transform= 'translateX(-' + nextSlide + ')';
+})
+leftButton.addEventListener('click', (e)=>{
+    let currentSlide = carousel.querySelector('.current_slide');
+    let nextSlide = currentSlide.previousElementSibling.style.right;
+
+    console.log(nextSlide);
 })
