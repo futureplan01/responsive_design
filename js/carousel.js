@@ -2,8 +2,9 @@ const carousel = document.querySelector('.carousel_content');
 const slides = Array.from(carousel.children);
 const rightButton = document.querySelector('.right_nav');
 const leftButton = document.querySelector('.left_nav');
+const currentSlideClass = 'current_slide';
 
-// Get with of slides
+// Get width of slides and put them next to each other
 const slideWidth = slides[0].getBoundingClientRect().width;
 const setSlidePosition = (slide,i)=>{
     slide.style.left=slideWidth*i+'px';
@@ -11,20 +12,30 @@ const setSlidePosition = (slide,i)=>{
 
 slides.forEach(setSlidePosition);
 
-const moveSlide = (carousel, currentSlide, targetSlide)=>{
+// Previous Element Is Null
+const moveSlide = (carousel, currentSlide, targetSlide,name)=>{
     carousel.style.transform = `translateX(-${targetSlide.style.left})`;
-    currentSlide.classList.remove('current-slide');
-    targetSlide.classList.add('current-slide');
+
+    // classList.remove is not working
+    currentSlide.classList.remove(currentSlideClass);
+    targetSlide.classList.add(currentSlideClass);
+    console.log(carousel);
+
 }
 
 //Click Right Button move slide to the right
 rightButton.addEventListener('click', (e)=>{
-    let currentSlide = carousel.querySelector('.current_slide');
+    let currentSlide = carousel.querySelector(`.${currentSlideClass}`);
     let targetSlide = currentSlide.nextElementSibling;
-    moveSlide(carousel,currentSlide,targetSlide);
+    if(targetSlide!==null) 
+        moveSlide(carousel,currentSlide,targetSlide, "Right Button");
 })
+
+// Causes Null Error
 leftButton.addEventListener('click', (e)=>{
-    let currentSlide = carousel.querySelector('.current_slide');
+    let currentSlide = carousel.querySelector(`.${currentSlideClass}`);
     let targetSlide = currentSlide.previousElementSibling;
-    moveSlide(carousel,currentSlide,targetSlide);
+    if(targetSlide!==null) 
+        moveSlide(carousel,currentSlide,targetSlide, "Left Button");
 })
+
