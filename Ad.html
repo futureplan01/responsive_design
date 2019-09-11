@@ -4,9 +4,8 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head> 
     <body>
-        <div>
+        <div class = "container">
             <div class="carousel">
-                
                 <button class="carousel_button right_nav">
                     <img src="img/right_arrow.png" onclick>
                 </button>
@@ -15,10 +14,10 @@
                         <li class="carousel_slide current_slide">
                             <img class="carousel_image" src="img/slide1_copylarge.png" alt="Slide one">
                         </li>
-                        <li class="carousel_slide">
+                        <li class="carousel_slide no_display">
                             <img class="carousel_image"src="https://img.grouponcdn.com/deal/dfwpvKGQkhU2vbq92buD/gu-2048x1229.jpg/v1/c700x420.jpg" alt="Slide two">
                         </li>
-                        <li class="carousel_slide">
+                        <li class="carousel_slide no_display">
                             <img class="carousel_image"src="https://cdn.getyourguide.com/img/tour_img-2069062-146.jpg" alt="Slide three">
                         </li>
                     </ul>
@@ -27,13 +26,12 @@
                     <img src="img/left_arrow.png" onclick>
                 </button>
             </div>
-           <!--
-               <div id = "video">
-                    <video id = "autoplay" width="500" height= "300" muted autoplay loop> 
-                        <source src ="Barclays EdTech.mp4" type="video/mp4"> 
-                    </video>
-              </div>   
-           --> 
+            <div class = "video">
+                <video id = "autoplay" width="500" height= "300" muted autoplay loop> 
+                    <source src ="img/Barclays EdTech.mp4" type="video/mp4"> 
+                </video>
+            </div>   
+
         </div>
         <script type="text/javascript" src="js/carousel.js"></script>
     </body>  

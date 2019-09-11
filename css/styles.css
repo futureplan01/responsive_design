@@ -7,8 +7,8 @@
 .carousel_image{
     background-color:#00aced;
     width: 100%; 
-    height: fit-content;
-    object-fit: cover;
+    height:100%;
+    object-fit: contain;
 }
 .carousel_content{
     padding:0;
@@ -18,18 +18,24 @@
     height: 100%;
     transition: transform 250ms ease-in;
 }
+
+
 .carousel_slide{
     position: absolute;
     top:0;  
     bottom:0;
     width: 100%;
+    height: 100%;
 }
 
 .carousel{
+    display:inline-block;
     position: relative;
-    height: 300px;
-    width: 60%;
-    margin: 0 auto;
+    height: 540px;
+    width: 49%;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
 }
 .carousel_button{
     position: absolute;
@@ -42,7 +48,62 @@
     right: -1px;
     z-index: 5;
 }
-
 .carousel_button img{
     width: 82px;
 }
+.no_display{
+    display: none;
+}
+.video{
+    display:inline-block;
+    height: 540px;
+    width: 49%;
+    padding: 0;
+    margin:0;
+    line-height: 0;
+}
+#autoplay{
+    height:100%;
+    width:100%;
+    object-fit: fill
+}
+@media (max-width: 767px) {
+    .container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      /* optional */
+      -webkit-box-align: start;
+      -moz-box-align: start;
+      -ms-flex-align: start;
+      -webkit-align-items: flex-start;
+      align-items: flex-start;
+    }
+  
+    .container .carousel {
+        height: 430px;
+        width: 100%;
+        -webkit-box-ordinal-group: 2;
+        -moz-box-ordinal-group: 2;
+        -ms-flex-order: 2;
+        -webkit-order: 2;
+        order: 2;
+    }
+  
+    .container .video {
+        height: 430px;
+        width:100%;
+        -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        -ms-flex-order: 1;
+        -webkit-order: 1;
+        order: 1;
+    }
+  }

@@ -18,7 +18,10 @@ const moveSlide = (carousel, currentSlide, targetSlide,name)=>{
 
     // classList.remove is not working
     currentSlide.classList.remove(currentSlideClass);
+    currentSlide.classList.remove('no_display');
+    targetSlide.classList.remove('no_display');
     targetSlide.classList.add(currentSlideClass);
+    
     console.log(carousel);
 
 }
