@@ -18,6 +18,14 @@
     height: 100%;
     transition: transform 250ms ease-in;
 }
+.carousel_container{
+    font-size: 0;
+    display: inline-block;
+}
+
+.img_div{
+    display: inline-block;
+}
 
 
 .carousel_slide{
@@ -51,9 +59,9 @@
 .carousel_button img{
     width: 82px;
 }
-.no_display{
+/*.no_display{
     display:none;
-}
+}*/
 .video{
     display:inline-block;
     height: 540px;

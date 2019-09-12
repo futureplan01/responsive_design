@@ -22,7 +22,7 @@ const moveSlide = (carousel, currentSlide, targetSlide,name)=>{
     targetSlide.classList.add(currentSlideClass);
     setTimeout(()=>{
         currentSlide.classList.add('no_display');
-    }, 300)
+    }, 295);
 }
 
 //Click Right Button move slide to the right
